@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WewinPrintService</title>
+</head>
+
+<body>
+    <script type="text/javascript" src="./labelimage/static/jquery.min.js"></script>
+    <script type="text/javascript" src="./labelimage/static/all.jquery.js"></script>
+    <script type="text/javascript" src="./labelimage/static/WewinPrintService.js"></script>
+    <script type="text/javascript" src="./code.js"></script>
+    <script>
+        $(function () {
+            var data = window.dialogArguments;
+            if (!data) {
+                data = window.location.search;
+                data = data.replace("?data=", "");
+                data = unescape(data);
+                data = JSON.parse(data);
+            }
+            var printCallBack = new Function('return ' + unescape(data[2]))();
+            data[1].modal = false;
+            data[1].noView = undefined;
+            wewin.LabelPrint(data[0], data[1], printCallBack, "modal");
+        })
+    </script>
+</body>
+
+</html>

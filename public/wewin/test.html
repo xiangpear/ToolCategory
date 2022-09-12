@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>WewinPrintService</title>
+</head>
+
+<body>
+    
+    <input type="button" value="标签1(安全工器具)" onclick="print安全工器具();" />
+
+    <script type="text/javascript" src="./labelimage/static/jquery.min.js"></script>
+    <script type="text/javascript" src="./labelimage/static/all.jquery.js"></script>
+    <script type="text/javascript" src="./labelimage/static/WewinPrintService.js"></script>
+    <script type="text/javascript" src="./code.js"></script>
+    <script>
+        
+        function print安全工器具() {
+            //json方式
+            var json = [
+                {"EntityTypeId":"安全工器具","Code":"123456789","Text":["工器具名称：安全帽","工器具编号：24号安全帽","工器具编码：124351321511234123532252"]}
+            ];
+            //xml 方式
+            var xml = "<?xml version=\"1.0\" encoding=\"utf-8\" ?><Data><Print><EntityTypeId>安全工器具</EntityTypeId><Code>123456789</Code><Text>工器具名称：安全帽</Text><Text>工器具编号：24号安全帽</Text><Text>工器具编码：124351321511234123532252</Text></Print></Data>";
+            wewin.LabelPrint(json);
+        }
+                            
+    </script>
+</body>
+
+</html>

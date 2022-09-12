@@ -1,0 +1,185 @@
+$color: $themeColor;
+
+// 表单页条件筛选
+.makeid-table-query {
+    background: #fff;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    margin-bottom: 10px;
+    position: relative;
+    .el-form-item {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+    .query-title {
+        padding: 12px 0px 0px 15px;
+        overflow: hidden;
+        .txt {
+            font-size: 16px;
+            font-weight: bold;
+            float: left;
+        }
+        .more {
+            font-size: 14px;
+            float: left;
+            margin-top: 1px;
+            margin-left: 16px;
+            cursor: pointer;
+            color: $color;
+        }
+    }
+    .query-content {
+        float: left;
+        width: 100%;
+        height: 100%;
+        padding: 0px 15px 5px 15px;
+        box-sizing: border-box;
+    }
+    .query-btn {
+        background: #fff;
+        position: absolute;
+        bottom: 12px;
+        right: 10px;
+        &.active {
+            position: relative;
+            float: right;
+            margin-top: 10px;
+        }
+        .more {
+            font-size: 14px;
+            float: right;
+            margin-top: 9px;
+            margin-left: 15px;
+            margin-right: 3px;
+            cursor: pointer;
+            color: $color;
+        }
+    }
+}
+
+// 表单页表格内容
+.makeid-table-box {
+    background: #fff;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    .box-btn {
+        margin-bottom: 10px;
+        .el-button {
+            margin-left: 10px;
+        }
+        
+        .upload-button {
+            display: inline-block;
+            position: relative;
+        }
+    }
+    .box-content {
+        .func-btns {
+            margin: 0 auto;
+            .el-button {
+                margin-left: 10px;
+            }
+        }
+        .table-status {
+            padding: 2px 12px;
+            border-radius: 50px;
+            &.success {
+                background: rgba($--color-success, 0.1);
+                border: 1px solid $--color-success;
+            }
+            &.warning {
+                background: rgba($--color-warning, 0.1);
+                border: 1px solid $--color-warning;
+            }
+            &.danger {
+                background: rgba($--color-danger, 0.1);
+                border: 1px solid $--color-danger;
+            }
+            &.info {
+                background: rgba($--color-info, 0.1);
+                border: 1px solid $--color-info;
+            }
+        }
+        .cell {
+            line-height: 30px !important;
+        }
+        .el-table th,
+        .el-table td {
+            padding: 5px 0;
+        }
+    }
+    // 分页组件的全局样式
+    .box-pagination {
+        .el-pagination {
+            text-align: right;
+            margin-top: 15px;
+        }
+    }
+    // 表单页表格内容更多操作按钮
+    .more-func-btns {
+        .el-button + .el-button {
+            margin-left: 0px !important;
+        }
+        .el-button {
+            margin-right: 10px;
+        }
+        .el-button:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+// 表单页弹窗
+.makeid-table-dialog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    .el-dialog__body {
+        height: calc(100% - 120px);
+        overflow-y: auto;
+        .el-upload-list__item{
+            transition: none !important;
+        }
+    }
+}
+
+// 表格自定义列
+.makeid-table-select {
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    background: $themeTransparentColor;
+    border: 1px solid $color;
+    box-sizing: border-box;
+    padding: 0 20px;
+    line-height: 40px;
+    font-size: 14px;
+    i {
+        color: $color;
+        margin-right: 10px;
+    }
+    .code {
+        color: $color;
+        font-weight: bold;
+        margin: 0 10px 0px 5px;
+    }
+    .select-btn {
+        float: right;
+    }
+}
+
+.makeid-table-select-popover {
+    .el-checkbox {
+        display: block !important;
+        margin-right: 5px !important;
+    }
+}

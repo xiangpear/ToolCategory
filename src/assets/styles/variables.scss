@@ -1,0 +1,46 @@
+// 主题蓝
+$themeColor: #3e8ef7;
+
+/* ========================= 主题派生色 ========================= */
+// 主题稍浅色
+$themeLightColor: rgba($themeColor, 0.8);
+
+//主题透明层色(重置按钮颜色, 表格列筛选)
+$themeTransparentColor: rgba($themeColor, 0.1);
+/* ========================= 主题派生色 ========================= */
+
+/* ========================= 侧面导航栏配置 ========================= */
+// 侧面菜单栏宽度
+$menuWidth: 210px;
+
+//图标颜色
+$iconBackgroundColor: $themeLightColor;
+
+// 菜单(默认)背景颜色
+$menuBackgroundColor: #fff;
+// 菜单(默认)字体颜色
+$menuTextColor: #333333;
+
+// 菜单(激活)背景颜色
+$menuActiveBackgroundColor: $themeLightColor;
+// 菜单(激活)文字颜色
+$menuActiveTextColor: #ffffff;
+
+// 菜单hover背景颜色
+$menuHoverBackgroundColor: $themeTransparentColor;
+$menuHoverTextColor: #333333;
+/* ========================= 侧面导航栏配置 ========================= */
+
+/* ========================= 顶部导航栏配置 ========================= */
+// 顶部导航栏字体颜色
+$navTextColor: #fff;
+
+// 顶部导航栏背景颜色
+$navBackgroudColor: $themeColor;
+
+// 顶部导航栏高度
+$navHeight: 60px;
+/* ========================= 顶部导航栏配置 ========================= */
+
+// 按钮圆角度
+$buttonBorderRadius: 4px;
